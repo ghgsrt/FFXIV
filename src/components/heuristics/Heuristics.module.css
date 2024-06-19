@@ -1,0 +1,24 @@
+.heuristics {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.item {
+    word-wrap: none;
+    overflow-wrap: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 1px;
+    margin: 0 5px;
+    height: 24px;
+    text-align: center;
+}
+
+.history {
+    flex: 1;
+    overflow-y: auto;
+}
