@@ -1,4 +1,5 @@
-.no-pointer, .no-pointer * {
+.no-pointer,
+.no-pointer * {
 	pointer-events: none;
 }
 
@@ -13,8 +14,10 @@
 }
 
 .hotbar .row {
-	width: 95%;
-	height: 52px;
+	height: min-content;
+	width: min-content;
+	/* width: 95%; */
+	/* height: 3.25rem; */
 	/* padding: 2px; */
 	/* margin: 0 auto; */
 	display: flex;
@@ -45,22 +48,37 @@
 .item {
 	position: relative;
 	display: inline-block;
-	width: 48px;
-	height: 48px;
-	background: url(/icons/icon_bg.png) no-repeat 4px 2px;
-	background-size: 40px 40px;
+	width: 3rem;
+	height: 3rem;
+	background: transparent;
+	/* background: url(/icons/icon_bg.png) no-repeat; */
+	/* background-size: 83%; */
 	vertical-align: middle;
 	color: auto;
-	margin: 3px;
-	font-size: 12px;
+	margin: 0.1875rem;
+	font-size: 0.75rem;
+	z-index: 0;
+	/* border-radius: 0.5rem; */
+	overflow: hidden;
+}
+.item::before {
+	content: '';
+	background: url(/icons/icon_bg.png) no-repeat;
+	background-size: 85%;
+	width: 3rem;
+	height: 3rem;
+	display: block;
+	position: absolute;
+	top: 4%;
+	left: 7.7%;
 	z-index: 0;
 }
-
 .item::after {
 	content: '';
 	background: url(/icons/icon_bg2.png) no-repeat;
-	width: 48px;
-	height: 48px;
+	background-size: cover;
+	width: 3rem;
+	height: 3rem;
 	display: block;
 	position: absolute;
 	top: 0;
@@ -96,18 +114,18 @@
 
 .icon {
 	position: absolute;
-	top: 2px !important;
+	top: 0.125rem !important;
 	left: 50% !important;
-	margin-left: -20px;
+	margin-left: -1.25rem;
 	z-index: 1;
-	height: 40px;
-	width: 40px;
+	height: 2.5rem;
+	width: 2.5rem;
 }
 
 .timer {
 	z-index: 2;
 	position: absolute;
-	top: 1px;
+	top: 0.0625rem;
 	left: 0;
 	transform: scaleY(-1) rotate(90deg);
 }
@@ -115,15 +133,15 @@
 .counter {
 	z-index: 4;
 	position: absolute;
-	top: 1px;
+	top: 0.0625rem;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	text-align: center;
 	margin: 0;
 	padding: 0;
-	line-height: 38px;
-	font-size: 18px;
+	line-height: 2.375rem;
+	font-size: 1.125rem;
 	font-weight: bold;
 }
 
@@ -135,5 +153,5 @@
 }
 
 .combo div {
-	outline: 5px solid gold;
+	outline: 0.3125rem solid gold;
 }

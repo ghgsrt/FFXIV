@@ -259,8 +259,8 @@ const HotbarItem: Component<Props> = (props) => {
 							<img
 								src={`icons/${props.item?.img || props.item?.name}.png`}
 								alt={props.item?.name}
-								width='40'
-								height='40'
+								width='43'
+								height='43'
 							/>
 
 							<svg

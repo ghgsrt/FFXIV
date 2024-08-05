@@ -28,8 +28,8 @@ const Spellbook: Component = () => {
 			_spellbook[group] = [...(_spellbook[group] ?? []), action];
 		}
 
-		for (const header in _spellbook)
-			_spellbook[header] = chunkArray(_spellbook[header], 7);
+		// for (const header in _spellbook)
+		// 	_spellbook[header] = chunkArray(_spellbook[header], 7);
 
 		return _spellbook as Record<string, Action[][]>;
 	});
@@ -39,7 +39,7 @@ const Spellbook: Component = () => {
 			class={styles.hotbar}
 			style={{
 				margin: '0',
-				width: 'min-content',
+				width: '100%',
 				'align-items': 'start',
 			}}
 		>
@@ -47,23 +47,25 @@ const Spellbook: Component = () => {
 				{(header) => (
 					<>
 						<h3>{header.split('_')[0]}</h3>
-						<For each={spellbook()[header]}>
-							{(row) => (
+						<div style={{ display: 'flex', 'flex-wrap': 'wrap', width: '100%' }}>
+							<For each={spellbook()[header]}>
+								{/* {(row) => (
 								<div class={styles.row}>
-									<For each={row}>
-										{(item) => (
-											<Item
-												keybind={undefined}
-												item={item}
-												itemType="action"
-												isPermanent={true}
-												noKeybind={true}
-											/>
-										)}
-									</For>
-								</div>
-							)}
-						</For>
+								<For each={row}> */}
+								{(item) => (
+									<Item
+										keybind={undefined}
+										item={item}
+										itemType='action'
+										isPermanent={true}
+										noKeybind={true}
+									/>
+								)}
+								{/* </For> */}
+								{/* </div> */}
+								{/* )} */}
+							</For>
+						</div>
 					</>
 				)}
 			</For>

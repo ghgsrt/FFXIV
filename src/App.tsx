@@ -89,11 +89,12 @@ const App: Component = () => {
 						flex: '1',
 						background: 'red',
 					}}
+				></div>
+				<div
+					style={{
+						height: '15%',
+					}}
 				>
-				</div>
-				<div style={{
-					height: '15%',
-				}}>
 					Active Traits
 				</div>
 				<div
