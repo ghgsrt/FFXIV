@@ -233,7 +233,7 @@ export function useState() {
 	// 	PoolValues,
 	// 	ReturnType<typeof useCleanup>
 	// ]
-	const [state, setState] = createStore({ ...defaultState, level: 90 });
+	const [state, setState] = createStore({ ...defaultState, level: 0 });
 
 	const cleaner = useCleanup<InternalControllerValues['ItemNames']>();
 	const { listen } = useInputs();
@@ -933,3 +933,5 @@ export const [
 ] = createRoot(useState);
 
 buildLUTs(controller);
+
+controller.updateLevel(90)
