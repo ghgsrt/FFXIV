@@ -1,4 +1,4 @@
-# MMO Simulator
+# MMO Combat Simulator
 
 A combat simulator for MMOs, with a focus on FFXIV.
 
